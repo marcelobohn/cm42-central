@@ -66,6 +66,8 @@ pt-BR:
   reset_tour: "Resetar tour"
   reset_tour_success: "A tour foi resetada com sucesso"
   reset_tour_fail: "Ocorreu um erro, por favor tente novamente"
+  update_stories_successfully: "As histórias foram atualizadas com sucesso"
+  stories_not_found: "Histórias não encontradas"
 
   story:
     state:

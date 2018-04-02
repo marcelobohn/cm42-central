@@ -2,11 +2,11 @@ class StoriesBulkUpdateController < ApplicationController
   def create
     authorize stories
 
-    return render(json: { message: 'Stories not found' }, status: :not_found) if stories.blank?
+    return render(json: { message: t(:stories_not_found) }, status: :not_found) if stories.blank?
     @updater = StoryOperations::UpdateAll.call(stories, allowed_params, current_user)
 
     if @updater
-      render json: { message: 'Stories were successfully updated' }, status: :ok
+      render json: { message: t(:update_stories_successfully) }, status: :ok
     else
       render json: { error: stories.map(&:errors) }, status: :unprocessable_entity
     end
